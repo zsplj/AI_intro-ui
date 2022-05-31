@@ -1,4 +1,5 @@
 QT       += core gui
+QT       += multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -15,8 +16,7 @@ SOURCES += \
     restrictedtrans_2.cpp \
     result_1.cpp \
     result_2.cpp \
-    speechsynthesis_1.cpp \
-    speechsynthesis_2.cpp
+    speechsynthesis_1.cpp
 
 HEADERS += \
     mainwindow.h \
@@ -24,8 +24,7 @@ HEADERS += \
     restrictedtrans_2.h \
     result_1.h \
     result_2.h \
-    speechsynthesis_1.h \
-    speechsynthesis_2.h
+    speechsynthesis_1.h
 
 FORMS += \
     mainwindow.ui \
@@ -33,8 +32,7 @@ FORMS += \
     restrictedtrans_2.ui \
     result_1.ui \
     result_2.ui \
-    speechsynthesis_1.ui \
-    speechsynthesis_2.ui
+    speechsynthesis_1.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

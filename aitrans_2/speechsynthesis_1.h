@@ -16,7 +16,11 @@ public:
     ~SpeechSynthesis_1();
 
 private slots:
-    void on_nextBtn_clicked();
+    void on_nextBtn_2_clicked();
+
+    void on_nextBtn_3_clicked();
+
+    void on_nextBtn_4_clicked();
 
 private:
     Ui::SpeechSynthesis_1 *ui;
