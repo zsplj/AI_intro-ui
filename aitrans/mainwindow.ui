@@ -23,6 +23,12 @@
       <height>71</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>华文新魏</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
     <property name="text">
      <string>自由风格转换</string>
     </property>
@@ -36,6 +42,12 @@
       <height>71</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>华文新魏</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
     <property name="text">
      <string>限定风格转换</string>
     </property>
@@ -45,9 +57,15 @@
      <rect>
       <x>20</x>
       <y>20</y>
-      <width>121</width>
+      <width>221</width>
       <height>31</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>华文新魏</family>
+      <pointsize>20</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>请选择转换模式：</string>
@@ -60,7 +78,7 @@
      <x>0</x>
      <y>0</y>
      <width>311</width>
-     <height>26</height>
+     <height>18</height>
     </rect>
    </property>
   </widget>

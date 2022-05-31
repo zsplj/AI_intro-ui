@@ -17,6 +17,7 @@ public:
 
 private:
     Ui::RestrictedTrans *ui;
+
 };
 
 #endif // RESTRICTEDTRANS_H

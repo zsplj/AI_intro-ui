@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>RestrictedTrans</class>
- <widget class="QWidget" name="RestrictedTrans">
+ <class>Freetrans_2</class>
+ <widget class="QWidget" name="Freetrans_2">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>限定语音风格转换</string>
+   <string>Form</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
@@ -29,7 +29,7 @@
     </font>
    </property>
    <property name="text">
-    <string>请录入您想要转换的语音：</string>
+    <string>请录入想要转换成的语音：</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton">

@@ -17,7 +17,6 @@ public:
 
 private slots:
     void on_fTransBtn_clicked();
-
     void on_rTransBtn_clicked();
 
 private:

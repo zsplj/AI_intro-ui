@@ -15,8 +15,11 @@ public:
     explicit FreeTrans(QWidget *parent = nullptr);
     ~FreeTrans();
 
+private slots:
+    void on_nextBtn_clicked();
+
 private:
     Ui::FreeTrans *ui;
-};
 
+};
 #endif // FREETRANS_H

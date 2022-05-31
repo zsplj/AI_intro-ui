@@ -10,19 +10,28 @@ CONFIG += c++17
 
 SOURCES += \
     freetrans.cpp \
+    freetrans_2.cpp \
     main.cpp \
     mainwindow.cpp \
-    restrictedtrans.cpp
+    restrictedtrans.cpp \
+    restrictedtrans_2.cpp \
+    result_1.cpp
 
 HEADERS += \
     freetrans.h \
+    freetrans_2.h \
     mainwindow.h \
-    restrictedtrans.h
+    restrictedtrans.h \
+    restrictedtrans_2.h \
+    result_1.h
 
 FORMS += \
     freetrans.ui \
+    freetrans_2.ui \
     mainwindow.ui \
-    restrictedtrans.ui
+    restrictedtrans.ui \
+    restrictedtrans_2.ui \
+    result_1.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
