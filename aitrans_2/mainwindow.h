@@ -16,8 +16,6 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_rTransBtn_clicked();
-
     void on_SynthesisBtn_clicked();
 
 private:

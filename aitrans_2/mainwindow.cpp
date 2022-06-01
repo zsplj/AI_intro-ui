@@ -15,14 +15,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_rTransBtn_clicked()
-{
-    RestrictedTrans * rTransWindow = new RestrictedTrans();
-
-    rTransWindow->show();
-}
-
-
 void MainWindow::on_SynthesisBtn_clicked()
 {
     SpeechSynthesis_1 * synWindow = new SpeechSynthesis_1();

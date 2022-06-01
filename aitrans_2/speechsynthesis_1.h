@@ -2,6 +2,7 @@
 #define SPEECHSYNTHESIS_1_H
 
 #include <QWidget>
+#include <QButtonGroup>
 
 namespace Ui {
 class SpeechSynthesis_1;
@@ -24,6 +25,7 @@ private slots:
 
 private:
     Ui::SpeechSynthesis_1 *ui;
+    QButtonGroup * logSelect;
 };
 
 #endif // SPEECHSYNTHESIS_1_H

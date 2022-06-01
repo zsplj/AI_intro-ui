@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>准备合成语音</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
@@ -55,7 +55,7 @@
    <property name="geometry">
     <rect>
      <x>90</x>
-     <y>350</y>
+     <y>330</y>
      <width>81</width>
      <height>31</height>
     </rect>
@@ -89,31 +89,12 @@
     <string>下一步</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton_7">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>320</y>
-     <width>81</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>华文新魏</family>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>语音4</string>
-   </property>
-  </widget>
-  <widget class="QRadioButton" name="radioButton">
+  <widget class="QRadioButton" name="radioButton1">
    <property name="geometry">
     <rect>
      <x>50</x>
      <y>230</y>
-     <width>81</width>
+     <width>111</width>
      <height>19</height>
     </rect>
    </property>
@@ -124,15 +105,15 @@
     </font>
    </property>
    <property name="text">
-    <string>语音1</string>
+    <string>哆啦A梦</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton_6">
+  <widget class="QRadioButton" name="radioButton3">
    <property name="geometry">
     <rect>
      <x>50</x>
      <y>290</y>
-     <width>81</width>
+     <width>111</width>
      <height>19</height>
     </rect>
    </property>
@@ -143,15 +124,15 @@
     </font>
    </property>
    <property name="text">
-    <string>语音3</string>
+    <string>蜡笔小新</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton_5">
+  <widget class="QRadioButton" name="radioButton2">
    <property name="geometry">
     <rect>
      <x>50</x>
      <y>260</y>
-     <width>81</width>
+     <width>91</width>
      <height>19</height>
     </rect>
    </property>
@@ -162,7 +143,7 @@
     </font>
    </property>
    <property name="text">
-    <string>语音2</string>
+    <string>慢羊羊</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
@@ -217,7 +198,7 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>350</y>
+     <y>330</y>
      <width>51</width>
      <height>31</height>
     </rect>

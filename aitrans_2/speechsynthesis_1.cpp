@@ -10,6 +10,10 @@ SpeechSynthesis_1::SpeechSynthesis_1(QWidget *parent) :
     ui(new Ui::SpeechSynthesis_1)
 {
     ui->setupUi(this);
+    logSelect = new QButtonGroup(this);
+    logSelect -> addButton(ui -> radioButton1, 1);
+    logSelect -> addButton(ui -> radioButton2, 2);
+    logSelect -> addButton(ui -> radioButton3, 3);
 }
 
 SpeechSynthesis_1::~SpeechSynthesis_1()
@@ -47,7 +51,7 @@ void SpeechSynthesis_1::on_nextBtn_3_clicked()
     QString path = QFileDialog::getOpenFileName(this, "选择语音文件", "../", "wav(*.wav)");
     if (!path.isEmpty()) {
         QFile file(path);
-        file.copy("D:/workspace/Qt/MockingBird/log.wav");
+        file.copy("D:/AI/test/aimodel/log.wav");
         // do something.
         file.close();
     }
@@ -59,9 +63,13 @@ void SpeechSynthesis_1::on_nextBtn_3_clicked()
 // 按下下一步按钮的行为
 void SpeechSynthesis_1::on_nextBtn_4_clicked()
 {
+    //读取文本
     QString text = ui -> plainTextEdit -> toPlainText();
+    if (ui -> plainTextEdit -> toPlainText().isEmpty()) {
+        QMessageBox::warning(this, "提示", "合成文本为空！");
+    }
     QFile file;
-    file.setFileName("D:/workspace/Qt/MockingBird/log.txt");
+    file.setFileName("D:/AI/test/aimodel/log.txt");
     if(file.open(QIODevice::WriteOnly | QIODevice::Text)) {
         QTextStream in(&file);
         in.setEncoding(QStringConverter::System);
@@ -72,14 +80,27 @@ void SpeechSynthesis_1::on_nextBtn_4_clicked()
     this -> close();
 
     //完成转换
-    system("cd D:/workspace/Qt/MockingBird && conda activate work && python gen_voice.py log.txt log.wav");
+    if (logSelect -> checkedId() == 1) {
+        QFile sFile("D:/AI/test/aimodel/voice-denoise/doramon.wav");
+        sFile.copy("D:/AI/test/aimodel/log.wav");
+    }
+    if (logSelect -> checkedId() == 2) {
+        QFile sFile("D:/AI/test/aimodel/voice-denoise/slow_sheep.wav");
+        sFile.copy("D:/AI/test/aimodel/log.wav");
+    }
+    if (logSelect -> checkedId() == 3) {
+        QFile sFile("D:/AI/test/aimodel/voice-denoise/xiaoxin.wav");
+        sFile.copy("D:/AI/test/aimodel/log.wav");
+    }
+    system("echo off && cd D:/AI/test/aimodel && conda activate work && python gen_voice.py log.txt log.wav");
 
+    //结果
     Result_1 *resWindow = new Result_1();
     resWindow -> setWindowModality(Qt::ApplicationModal);
     resWindow -> show();
 
     file.remove();
-    QFile wavFile("D:/workspace/Qt/MockingBird/log.wav");
+    QFile wavFile("D:/AI/test/aimodel/log.wav");
     wavFile.remove();
 }
 

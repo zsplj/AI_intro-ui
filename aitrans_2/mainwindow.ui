@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>语音合成转换器</string>
+   <string>语音合成器</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="SynthesisBtn">
@@ -30,26 +30,7 @@
      </font>
     </property>
     <property name="text">
-     <string>语音合成</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="rTransBtn">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>140</y>
-      <width>261</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>华文新魏</family>
-      <pointsize>20</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>语音转换</string>
+     <string>开始语音合成</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -78,7 +59,7 @@
      <x>0</x>
      <y>0</y>
      <width>311</width>
-     <height>18</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
