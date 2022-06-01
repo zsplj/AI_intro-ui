@@ -3,6 +3,7 @@
 #include "result_1.h"
 #include <QFileDialog>
 #include <QMessageBox>
+#include <QTextStream>
 
 SpeechSynthesis_1::SpeechSynthesis_1(QWidget *parent) :
     QWidget(parent),
@@ -46,8 +47,9 @@ void SpeechSynthesis_1::on_nextBtn_3_clicked()
     QString path = QFileDialog::getOpenFileName(this, "选择语音文件", "../", "wav(*.wav)");
     if (!path.isEmpty()) {
         QFile file(path);
-        file.copy("./log.wav");
+        file.copy("D:/workspace/Qt/MockingBird/log.wav");
         // do something.
+        file.close();
     }
     else {
         QMessageBox::warning(this, "提示", "文件路径为空！");
@@ -59,17 +61,25 @@ void SpeechSynthesis_1::on_nextBtn_4_clicked()
 {
     QString text = ui -> plainTextEdit -> toPlainText();
     QFile file;
-    file.setFileName("./log.txt");
+    file.setFileName("D:/workspace/Qt/MockingBird/log.txt");
     if(file.open(QIODevice::WriteOnly | QIODevice::Text)) {
         QTextStream in(&file);
+        in.setEncoding(QStringConverter::System);
         in << text;
     }
     file.close();
 
-    //假设这里完成了转换，输出了一个 ./res.wav
+    this -> close();
 
-    //
+    //完成转换
+    system("cd D:/workspace/Qt/MockingBird && conda activate work && python gen_voice.py log.txt log.wav");
+
     Result_1 *resWindow = new Result_1();
+    resWindow -> setWindowModality(Qt::ApplicationModal);
     resWindow -> show();
+
+    file.remove();
+    QFile wavFile("D:/workspace/Qt/MockingBird/log.wav");
+    wavFile.remove();
 }
 

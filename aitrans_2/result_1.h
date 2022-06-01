@@ -2,6 +2,7 @@
 #define RESULT_1_H
 
 #include <QWidget>
+#include <QSoundEffect>
 
 namespace Ui {
 class Result_1;
